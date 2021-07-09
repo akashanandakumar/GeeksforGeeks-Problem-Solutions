@@ -1,1 +1,1 @@
-# GeeksforGeeks-DSA-Contest-Solutions
+# GeeksforGeeks "Data Structures and Algorithms" Contest Solutions
