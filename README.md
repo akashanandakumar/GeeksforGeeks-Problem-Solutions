@@ -1,4 +1,4 @@
-#GeeksforGeeks
- * *Data Structures and Algorithms Course Contest
- * *Some Practice Problems
+# GeeksforGeeks
+ * *Data Structures and Algorithms Course Contest*
+ * *Some Practice Problems*
  
