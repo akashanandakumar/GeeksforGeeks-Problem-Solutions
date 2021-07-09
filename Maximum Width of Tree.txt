@@ -1,0 +1,44 @@
+Practice Problem Link : https://practice.geeksforgeeks.org/problems/maximum-width-of-tree/1/?track=DSASP-Tree&batchId=154
+
+
+
+class Solution
+{
+    public:
+    int getMaxWidth(Node* root)
+    {
+    
+        queue<Node*>q;
+        q.push(root);
+        vector<int>v1;
+        Node* node;
+        while(1)
+        {    
+            vector<int>v;
+            int size=q.size();
+            if(size==0)
+            {
+                break;
+            }
+            while(size)
+            {    
+                node = q.front();
+                q.pop();
+                v.push_back(node->data);
+                if(node->left)
+                {
+                    q.push(node->left);
+                }
+                if(node->right)
+                {
+                    q.push(node->right);   
+                }
+                size--;
+            }
+            v1.push_back(v.size());
+        }
+        int x =  *max_element(v1.begin(),v1.end());
+        return x;
+    
+}
+};

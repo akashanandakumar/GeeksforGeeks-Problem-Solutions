@@ -1,0 +1,57 @@
+Practice Problem Link : https://practice.geeksforgeeks.org/problems/merge-three-sorted-arrays-1587115620/1/?track=DSASP-Sorting&batchId=154
+
+
+class Solution{
+  public:
+    
+    vector<int> mergeThree(vector<int>& A, vector<int>& B, vector<int>& C) 
+    { 
+        
+    	vector<int> result;
+	int i = 0;
+	int j = 0;
+	while(i < A.size() && j < B.size())
+	{
+	if(A[i] < B[j]){
+	result.push_back(A[i++]);
+	}else if(A[i] > B[j]){
+	result.push_back(B[j++]);
+	}else{
+	result.push_back(A[i++]);
+	result.push_back(B[j++]);
+	}
+	}
+	while(i < A.size()){
+	result.push_back(A[i++]);
+	}
+	while(j < B.size()){
+	result.push_back(B[j++]);
+	}
+	
+	i = 0;
+	j = 0;
+	vector<int> value;
+	while(i < result.size() && j < C.size())
+	{
+	if(result[i] < C[j]){
+	value.push_back(result[i++]);
+	}
+	else if(result[i] > C[j]){
+	value.push_back(C[j++]);
+	}
+	else{
+	value.push_back(result[i++]);
+	value.push_back(C[j++]);
+	}
+	}
+	while(i < result.size()){
+	value.push_back(result[i++]);
+	}
+	while(j < C.size()){
+	value.push_back(C[j++]);
+	}
+	result.clear();
+	return value;
+	}
+
+};

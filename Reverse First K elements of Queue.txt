@@ -1,0 +1,27 @@
+Practice Problem Link : https://practice.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1/?track=DSASP-Queue&batchId=154
+
+
+
+queue<int> modifyQueue(queue<int> q, int k)
+{
+    int count=0;
+    stack<int>s;
+    while(!q.empty()&&count!=k)
+    {
+        s.push(q.front());
+        q.pop();
+        count++;
+    }
+    queue<int>ans;
+    while( !s.empty() )
+    {   
+        ans.push(s.top());
+        s.pop();
+    }
+    while(!q.empty())
+    {
+        ans.push(q.front());
+        q.pop();
+    }
+    return ans;
+}

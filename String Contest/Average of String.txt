@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int averageValue(string s)
+{
+	int sum_char = 0;
+
+	
+	for (int i = 0; i < s.length(); i++)
+	{
+		sum_char += (int)s[i];
+	}
+
+	
+	int result = sum_char / s.length();
+	int ans = floor(result);
+	return ans;
+}
+
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--){
+        
+    
+    	string s ;
+    	cin >> s;
+    
+    	cout << averageValue(s) << endl;
+    }
+	return 0;
+}
